@@ -1,52 +1,4 @@
-package application;
-
-import graph.FlightGraph;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-import javafx.geometry.Insets;
-import javafx.geometry.Pos;
-import javafx.scene.control.*;
-import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.layout.*;
-import javafx.scene.paint.Color;
-import javafx.scene.text.Font;
-import javafx.scene.text.FontWeight;
-import model.Airport;
-import utils.AirportSearch;
-import utils.Csvreader;
-
-import java.util.List;
-import java.util.function.Consumer;
-
-/**
- * AirportPanel.java
- * 
- * JavaFX panel for Airport Management operations.
- * Allows users to:
- *   - View all airports in a sortable table
- *   - Add new airports
- *   - Remove airports
- *   - Search airports by keyword, city, or country
- *   - Save/Load airport data to/from CSV
- */
-public class AirportPanel {
-
-    private final FlightGraph graph;
-    private final Consumer<String> statusCallback;
-
-    // TableView data
-    private TableView<Airport> airportTable;
-    private ObservableList<Airport> airportData;
-
-    // Input fields
-    private TextField codeField;
-    private TextField nameField;
-    private TextField cityField;
-    private TextField countryField;
-    private TextField searchField;
-    private ComboBox<String> searchTypeBox;
-
-    /**
+teppw
      * Constructor.
      * 
      * @param graph          The shared flight graph
@@ -378,22 +330,4 @@ public class AirportPanel {
 
     private String getInputStyle() {
         return "-fx-background-color: #0f3460; " +
-               "-fx-text-fill: #ccd6f6; " +
-               "-fx-prompt-text-fill: #6272a4; " +
-               "-fx-background-radius: 4; " +
-               "-fx-border-color: #1f5297; -fx-border-radius: 4;";
-    }
-
-    private String getComboStyle() {
-        return "-fx-background-color: #0f3460; " +
-               "-fx-text-fill: #ccd6f6;";
-    }
-
-    private void showAlert(Alert.AlertType type, String title, String content) {
-        Alert alert = new Alert(type);
-        alert.setTitle(title);
-        alert.setHeaderText(null);
-        alert.setContentText(content);
-        alert.showAndWait();
-    }
-}
+             
